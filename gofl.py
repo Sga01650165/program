@@ -84,14 +84,14 @@ def forgot_pass (): # این بخش در مورد ارسال اس ام اس در
     list_of_number = ['0','1','2','3','4','5','6','7','8','9']
     make_random_number = random.sample(list_of_number,9)
     add_to_string = ''.join(make_random_number)
-    list_of_pass.insert(index_of_pass,add_to_string)
+    list_of_pass.insert(index_of_pass,add_to_string) #ظاهرا در این خط یک باگ سینتکسی وجود دارد که مشکل از روند کدهای بالا هست به کل این قسمت را چشم پوشی کنید
     forgot_pass2(add_to_string)
 ###################
-def forgot_pass2 (number):
-    import ghasedakpack
+def forgot_pass2 (number):   # این قسمت برای مثال میباشد
+    import ghasedakpack # این ای پی ای با توجه به کد بالا کار میکند که مشکل سینتکسی دارد و علاوه بر آن این ای پی ای برای بنده غیرفعال هست
     phone = int(input("enter the your phone number:"))
     message = number
-    receptor = str(phone)
+    receptor = str(phone)                   
     linenumber = "10008566"
     sms = ghasedakpack.Ghasedak("")
     sms.send({'mesaage':message, 'receptor':receptor, 'linenumber':linenumber})
